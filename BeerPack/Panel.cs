@@ -73,18 +73,18 @@ namespace BeerPack
                 switch (_rotangle)
                 {
                     case 0:
-                        Convert((rootWidth - panelWidth) / 2, rootHeight, parentX, parentY);
+                        Convert((rootWidth - panelWidth + hingeOffset) / 2, rootHeight, parentX, parentY);
                         break;
                     case 90:
                         Swap(ref panelHeight, ref panelWidth);
-                        Convert(rootWidth, (rootHeight - panelHeight) / 2, parentX, parentY);
+                        Convert(rootWidth, (rootHeight - panelHeight + hingeOffset) / 2, parentX, parentY);
                         break;
                     case 180:
-                        Convert((rootWidth - panelWidth) / 2, -panelHeight, parentX, parentY);
+                        Convert((rootWidth - panelWidth + hingeOffset) / 2, -panelHeight, parentX, parentY);
                         break;
                     case 270:
                         Swap(ref panelHeight, ref panelWidth);
-                        Convert(-panelWidth, (rootHeight - panelHeight) / 2, parentX, parentY);
+                        Convert(-panelWidth, (rootHeight - panelHeight + hingeOffset) / 2, parentX, parentY);
                         break;
                     default:
                         break;
